@@ -17,10 +17,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install packages
         run: npm install
+
+      - name: Check Android JavaScript bundle
+        run: npx expo export --platform android
 
       - name: Link Expo project
         env:
