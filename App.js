@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   Alert,
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -47,10 +48,12 @@ export default function App() {
         </View>
 
         <View style={styles.hero}>
-          <View style={styles.logoFrame}>
-            <Text style={styles.logoLetters}>NS</Text>
-            <Text style={styles.logoCrown}>♛</Text>
-          </View>
+          <Image
+            source={require('./assets/new-state-city-logo.webp')}
+            style={styles.brandLogo}
+            resizeMode="contain"
+            accessibilityLabel="شعار NEW STATE CITY"
+          />
           <Text style={styles.serverName}>NEW STATE CITY</Text>
           <Text style={styles.tagline}>حياتك تبدأ من هنا</Text>
           <View style={styles.blueRule} />
@@ -131,9 +134,7 @@ const styles = StyleSheet.create({
   dot: { width: 6, height: 6, borderRadius: 5, backgroundColor: '#F0B84B' },
   liveText: { color: '#D8E6F7', fontSize: 10, fontWeight: '700' },
   hero: { alignItems: 'center', paddingTop: 32, paddingBottom: 28 },
-  logoFrame: { width: 132, height: 132, borderRadius: 34, borderWidth: 1, borderColor: '#286EAE', backgroundColor: '#0B1C31', alignItems: 'center', justifyContent: 'center', shadowColor: BLUE, shadowOpacity: 0.3, shadowRadius: 18, elevation: 8 },
-  logoLetters: { color: '#E8F5FF', fontSize: 58, fontWeight: '900', letterSpacing: -7, textShadowColor: BLUE, textShadowRadius: 14 },
-  logoCrown: { position: 'absolute', top: -18, color: CYAN, fontSize: 38, textShadowColor: BLUE, textShadowRadius: 10 },
+  brandLogo: { width: 174, height: 174, marginBottom: 4 },
   serverName: { color: '#F2F8FF', fontSize: 25, fontWeight: '900', letterSpacing: 2, marginTop: 22 },
   tagline: { color: CYAN, fontSize: 14, fontWeight: '700', marginTop: 7 },
   blueRule: { width: 74, height: 3, borderRadius: 5, backgroundColor: BLUE, marginTop: 17 },
