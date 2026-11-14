@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "NEW STATE CITY",
+    "slug": "new-state-city-launcher",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "android": {
+      "package": "com.newstatecity.launcher",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#050A13"
+      }
+    }
+  }
+}
